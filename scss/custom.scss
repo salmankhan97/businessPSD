@@ -280,7 +280,7 @@ section:hover .header::after{
 			}
 			h3{
 				font-size: 18px;
-				color: #424242;
+				color: #FFF;
 				font-weight: bold;
 			}
 			p{
@@ -371,18 +371,21 @@ section:hover .header::after{
 		}
 	}
 	.analysis-form{
-		&.collapsing{
-			padding: 0px 50px;
-			p{
-				padding-top: 50px;
-			}
-			.btnclose{
-				@include transform(translate(-100%,0%));
-			}
-		}
+		
 		background: $body;
 		padding: 50px;
 		border-radius: 6px;
+		&::before{
+			content: "";
+			position: absolute;
+			@include transform(translate(-50%, -100%));
+			top: 0px;
+			left: 50%;
+			z-index: 1;
+			border: 30px solid;
+			border-color: transparent transparent #f3f3f3 transparent;
+			box-sizing: none;
+		}
 		form{
 			padding: 0px 60px;
 			@media(max-width: 767px){
@@ -435,6 +438,12 @@ section:hover .header::after{
 				background: #FFF !important;
 			}
 		}
+	}
+	.collapsing{
+		.btnclose{
+			@include transform(translate(-100%,0%));
+		}
+
 	}
 }
 

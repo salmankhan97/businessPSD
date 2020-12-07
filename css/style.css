@@ -233,7 +233,7 @@ section:hover .header::after {
       font-family: "Georgia"; }
     .ourapproach .steps-layer .imgholder h3 {
       font-size: 18px;
-      color: #424242;
+      color: #FFF;
       font-weight: bold; }
     .ourapproach .steps-layer .imgholder p {
       font-size: 14px !important;
@@ -311,16 +311,20 @@ section:hover .header::after {
     background: #f3f3f3 !important;
     padding: 50px;
     border-radius: 6px; }
-    .analysis .analysis-form.collapsing {
-      padding: 0px 50px; }
-      .analysis .analysis-form.collapsing p {
-        padding-top: 50px; }
-      .analysis .analysis-form.collapsing .btnclose {
-        transform: translate(-100%, 0%);
-        -moz-transform: translate(-100%, 0%);
-        -webkit-transform: translate(-100%, 0%);
-        -ms-transform: translate(-100%, 0%);
-        -o-transform: translate(-100%, 0%); }
+    .analysis .analysis-form::before {
+      content: "";
+      position: absolute;
+      transform: translate(-50%, -100%);
+      -moz-transform: translate(-50%, -100%);
+      -webkit-transform: translate(-50%, -100%);
+      -ms-transform: translate(-50%, -100%);
+      -o-transform: translate(-50%, -100%);
+      top: 0px;
+      left: 50%;
+      z-index: 1;
+      border: 30px solid;
+      border-color: transparent transparent #f3f3f3 transparent;
+      box-sizing: none; }
     .analysis .analysis-form form {
       padding: 0px 60px; }
       @media (max-width: 767px) {
@@ -374,6 +378,12 @@ section:hover .header::after {
       .analysis .analysis-form .btnclose:hover {
         color: #dd2a24 !important;
         background: #FFF !important; }
+  .analysis .collapsing .btnclose {
+    transform: translate(-100%, 0%);
+    -moz-transform: translate(-100%, 0%);
+    -webkit-transform: translate(-100%, 0%);
+    -ms-transform: translate(-100%, 0%);
+    -o-transform: translate(-100%, 0%); }
 
 /*getintouch*/
 .getintouch {
