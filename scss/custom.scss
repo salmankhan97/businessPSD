@@ -375,6 +375,9 @@ section:hover .header::after{
 		background: $body;
 		padding: 50px;
 		border-radius: 6px;
+		@media (max-width: 575px){
+			padding: 50px 10px;
+		}
 		&::before{
 			content: "";
 			position: absolute;

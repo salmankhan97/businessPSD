@@ -311,6 +311,9 @@ section:hover .header::after {
     background: #f3f3f3 !important;
     padding: 50px;
     border-radius: 6px; }
+    @media (max-width: 575px) {
+      .analysis .analysis-form {
+        padding: 50px 10px; } }
     .analysis .analysis-form::before {
       content: "";
       position: absolute;
